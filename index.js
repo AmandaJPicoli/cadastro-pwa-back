@@ -19,8 +19,8 @@ app.use(cors({origin: true, credentials: true}));
 app.route('/api/seguros').post(salvarSeguro);
 app.route('/api/seguros').get(listarSeguros);
 
-const HOST = 'localhost';
-const PORT = 9000;
+const HOST = 'http://cadastro-b-pwa.herokuapp.com/';
+const PORT = 80;
 
 const httpServer = app.listen(PORT, HOST, () => {
     console.log(`Servidor rodando em http://${HOST}:${PORT}`);
