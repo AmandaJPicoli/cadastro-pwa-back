@@ -1,3 +1,3 @@
-exports.SEGUROS =[];
+export const SEGUROS =[];
 
-exports.USER_SUBSCRIPTIONS = [];
+export const USER_SUBSCRIPTIONS = [];
