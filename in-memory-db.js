@@ -1,3 +1,3 @@
-export const SEGUROS =[];
+const SEGUROS =[];
 
-export const USER_SUBSCRIPTIONS = [];
+const USER_SUBSCRIPTIONS = [];
