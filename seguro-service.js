@@ -21,3 +21,7 @@ exports.addPushSubscriber = (req, res) => {
 
     res.status(200).json({message: "Subscription adicionado com sucesso."});
 }
+
+exports.listaSubscribes = (req, res) => {
+    res.status(200).json(USER_SUBSCRIPTIONS);
+}
