@@ -19,8 +19,8 @@ app.use(cors({origin: true, credentials: true}));
 app.route('/api/seguros').post(salvarSeguro);
 app.route('/api/seguros').get(listarSeguros);
 
-const PORT = 9000;
+const PORT = process.env.PORT|| 8080;
 
-const httpServer = app.listen(PORT, HOST, () => {
-    console.log(`Servidor rodando em http://${HOST}:${PORT}`);
+const httpServer = app.listen(PORT, () => {
+    console.log(`Servidor rodando em http://localhost:${PORT}`);
 })
