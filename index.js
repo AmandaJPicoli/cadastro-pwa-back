@@ -19,7 +19,6 @@ app.use(cors({origin: true, credentials: true}));
 app.route('/api/seguros').post(salvarSeguro);
 app.route('/api/seguros').get(listarSeguros);
 
-const HOST = 'localhost';
 const PORT = 9000;
 
 const httpServer = app.listen(PORT, HOST, () => {
