@@ -1,3 +1,3 @@
-const SEGUROS =[];
+exports.SEGUROS =[];
 
-const USER_SUBSCRIPTIONS = [];
+exports.USER_SUBSCRIPTIONS= [];
