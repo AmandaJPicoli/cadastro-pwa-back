@@ -21,8 +21,8 @@ app.use(cors({origin: true, credentials: true}));
 
 app.route('/api/seguros').post(salvarSeguro);
 app.route('/api/seguros').get(listarSeguros);
-app.route('/api/seguros/:index').get(atualizarSeguro);
-app.route('/api/seguros/:index').get(deletarSeguros);
+app.route('/api/seguros/:index').put(atualizarSeguro);
+app.route('/api/seguros/:index').delete(deletarSeguros);
 app.route('/api/seguros/:index').get(listarSeguroPorID);
 app.route('/api/notifications').post(addPushSubscriber);
 app.route('/api/notifications').get(listaSubscribes);
