@@ -9,8 +9,35 @@ exports.salvarSeguro = (req, res) => {
     res.status(200).json({message: 'Seguro adicionado com sucesso'});
 }
 
+exports.atualizarSeguro = (req, res) => {
+    const index = req.params;
+    const seguros = req.body;
+    
+    SEGUROS[index] = seguros;
+
+    console.log('Seguro atualizado', seguro)
+
+    res.status(200).json({message: `Seguro atualizado com sucesso`});
+}
+
 exports.listarSeguros = (req, res) => {
     res.status(200).json(SEGUROS);
+}
+
+exports.listarSeguroPorID = (req, res) => {
+    const index = req.params;
+
+    res.status(200).json(SEGUROS[index]);
+}
+
+exports.deletarSeguro = (req, res) => {
+    const index = req.params;
+
+    SEGUROS.splice(index, 1);
+
+    console.log('Seguro excluido', seguro)
+
+    res.status(200).json({message: `Seguro de excluido com sucesso`});
 }
 
 exports.addPushSubscriber = (req, res) => {
@@ -25,3 +52,4 @@ exports.addPushSubscriber = (req, res) => {
 exports.listaSubscribes = (req, res) => {
     res.status(200).json(USER_SUBSCRIPTIONS);
 }
+
